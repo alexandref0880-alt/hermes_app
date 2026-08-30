@@ -22,6 +22,9 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Привязка путей SDK
+        run: echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
+
       - name: Загрузка библиотек
         run: flutter pub get
 
